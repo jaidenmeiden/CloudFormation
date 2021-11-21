@@ -7,7 +7,7 @@ Resources:
   RestApiAD:
     Type: AWS::ApiGateway::RestApi
     Properties:
-      Name: api-platzi
+      Name: api-jaiden
   Method:
     Type: AWS::ApiGateway::Method
     Properties:

@@ -23,7 +23,7 @@ Resources:
         Role: !GetAtt LambdaRole.Arn
         Environment:
             Variables:
-                DYNAMO_PLATZI: !ImportValue DynamoPlatzi
+                DYNAMO_PLATZI: !ImportValue DynamoJaiden
 
     LambdaPolicyEC2:
         Type: AWS::IAM::ManagedPolicy
