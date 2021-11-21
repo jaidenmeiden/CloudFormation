@@ -1,0 +1,20 @@
+{
+    "Type" : "AWS::DynamoDB::Table",
+    "Properties" : {
+        "AttributeDefinitions" : [ AttributeDefinition],
+        "BillingMode" : String,
+        "ContributorInsightsSpecification" : ContributorInsightsSpecification,
+        "GlobalSecondaryIndexes" : [ GlobalSecondaryIndex],
+        "KeySchema" : [ KeySchema],
+        "KinesisStreamSpecification" : KinesisStreamSpecification,
+        "LocalSecondaryIndexes" : [ LocalSecondaryIndex],
+        "PointInTimeRecoverySpecification" : PointInTimeRecoverySpecification,
+        "ProvisionedThroughput" : ProvisionedThroughput,
+        "SSESpecification" : SSESpecification,
+        "StreamSpecification" : StreamSpecification,
+        "TableName" : String,
+        "Tags" : [ Tag],
+        "TimeToLiveSpecification" : TimeToLiveSpecification
+      }
+  }
+  
