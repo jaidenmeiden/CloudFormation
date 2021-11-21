@@ -33,10 +33,10 @@
         }
     },
     "Outputs" : {
-        "NameDynamo" : {
+        "SurnameDynamo" : {
             "Value" : { "Ref" : "myDynamoDBTable" },
             "Export" : { 
-                "Name" : "NameDynamo" 
+                "Name" : "SurnameDynamo" 
             }
         }
     }
