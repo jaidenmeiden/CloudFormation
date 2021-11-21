@@ -1,33 +1,25 @@
 AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  DynamoAttribute:
+    Type: String    
+  NameDynamo:
+    Type: String
 Resources: 
   myDynamoDBTable: 
     Type: AWS::DynamoDB::Table
     Properties: 
-Type: AWS::DynamoDB::Table
-Properties: 
-  AttributeDefinitions: 
-    - AttributeDefinition
-  BillingMode: String
-  ContributorInsightsSpecification: 
-    ContributorInsightsSpecification
-  GlobalSecondaryIndexes: 
-    - GlobalSecondaryIndex
-  KeySchema: 
-    - KeySchema
-  KinesisStreamSpecification: 
-    KinesisStreamSpecification
-  LocalSecondaryIndexes: 
-    - LocalSecondaryIndex
-  PointInTimeRecoverySpecification: 
-    PointInTimeRecoverySpecification
-  ProvisionedThroughput: 
-    ProvisionedThroughput
-  SSESpecification: 
-    SSESpecification
-  StreamSpecification: 
-    StreamSpecification
-  TableName: String
-  Tags: 
-    - Tag
-  TimeToLiveSpecification: 
-    TimeToLiveSpecification
+      AttributeDefinitions: 
+        - AttributeName: !Ref DynamoAttribute
+          AttributeType: S
+      KeySchema:
+        - AttributeName: !Ref DynamoAttribute
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+      SSESpecification: 
+        SSEEnabled: true
+      TableName: !Ref NameDynamo
+Outputs:
+  NameDynamo: 
+    Value: !Ref myDynamoDBTable
+    Export:
+      Name: NameDynamo
